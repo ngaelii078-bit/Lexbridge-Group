@@ -1,155 +1,94 @@
 import Link from "next/link";
-import KnotHero from "@/components/KnotHero";
-import Plates from "@/components/Plates";
-import Reveal from "@/components/Reveal";
-import Strands from "@/components/Strands";
-import Volume from "@/components/Volume";
-import WhippedEnd from "@/components/WhippedEnd";
-import { assessed, convictions, sectors, signs } from "@/lib/content";
-import { site } from "@/lib/site";
+import FreightMotion from "@/components/FreightMotion";
+import BackgroundVideo from "@/components/BackgroundVideo";
+import "./home.css";
+
+const capabilities = [
+  ["Local courier", "Nationwide documents, parcels and distribution."],
+  ["International freight", "Imports, exports, air and sea freight, and customs."],
+  ["Transport & warehousing", "Dedicated transport and third-party logistics."],
+  ["E-commerce & mailroom", "Connected shipping, fulfilment and document flows."],
+] as const;
 
 export default function Home() {
   return (
-    <>
-      <KnotHero />
+    <div className="home-experience">
+      <div className="home-hero-story">
+      <section className="home-hero motion-hero" aria-labelledby="home-heading">
+        <div className="home-scene" data-freight-scene aria-hidden="true"><BackgroundVideo /></div>
+        <div className="home-hero-shade" aria-hidden="true" />
+        <FreightMotion />
+        <div className="home-shell home-hero-inner">
+          <div className="home-hero-copy" data-freight-copy>
+            <p className="home-eyebrow"><span /> Independent logistics brokerage</p>
+            <h1 id="home-heading">One relationship.<br /><em>Every logistics solution.</em></h1>
+            <p className="home-intro">The right people. The right partners. One experienced team bringing your logistics together.</p>
+            <div className="home-actions">
+              <Link className="home-button home-button-light" href="/start">Book a strategy session</Link>
+              <Link className="home-button home-button-outline" href="/strategic-value-assessment">Explore the assessment</Link>
+            </div>
+          </div>
+          <div className="home-hero-bottom">
+            <p className="home-hero-caption">Built on trust.<br /><strong>Powered by purpose.</strong></p>
+            <div className="home-glass" data-freight-glass aria-label="The LexBridge advantage">
+              <div><strong>18 years</strong><span>of industry relationships</span></div>
+              <div><strong>One contact</strong><span>for your logistics network</span></div>
+              <div><strong>Independent</strong><span>advice for your business</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
 
-      <section className="section band-sail">
-        <div className="wrap">
-          <Reveal className="stack">
-            <h2>How many of these are you holding together?</h2>
-            <p className="lede muted">
-              Finding providers takes months. Then someone has to compare them, negotiate with them, test them and
-              keep them talking to each other.
-            </p>
-          </Reveal>
-          <div style={{ marginTop: "var(--s5)" }}>
-            <Strands />
+      <section className="home-section home-introduction">
+        <div className="home-shell home-intro-grid">
+          <p className="home-kicker">A better way to work</p>
+          <div>
+            <h2>Logistics is complicated.<br /><span>Your relationship doesn’t have to be.</span></h2>
+            <div className="home-intro-text">
+              <p>Finding the right providers takes time. Managing them takes even more. We bring together a carefully selected network and coordinate the relationships for you.</p>
+              <p>With experience, commercial influence and a personal approach, we help you make better decisions across the whole operation.</p>
+            </div>
+            <Link className="home-text-link" href="/about">Get to know LexBridge</Link>
           </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="wrap split">
-          <Reveal><h2>We have done the searching.</h2></Reveal>
-          <Reveal className="stack">
-            <p>
-              LexBridge is an independent logistics brokerage. For 18 years the work has been finding out which people
-              and which firms in this industry do what they say.
-            </p>
-            <p>
-              So you do not have to find, test and manage several providers. We bring in partners who have already shown
-              their service and their pricing, and we oversee the relationship from there.
-            </p>
-            <p>
-              We are not tied to recommending one provider. If the right answer changes as your business changes, the
-              recommendation changes with it.
-            </p>
-          </Reveal>
+      <section className="home-section home-services" id="solutions">
+        <div className="home-shell">
+          <div className="home-section-head">
+            <div><p className="home-kicker">What we coordinate</p><h2>All the moving parts.<br /><span>One point of contact.</span></h2></div>
+            <p>From a single shipment to an entire logistics operation, we connect your business with the specialists it needs.</p>
+          </div>
+          <div className="home-service-grid">
+            {capabilities.map(([title, description]) => (
+              <article className="home-service-card" key={title}>
+                <span className="home-card-number">Logistics solutions</span>
+                <div><h3>{title}</h3><p>{description}</p></div>
+              </article>
+            ))}
+          </div>
+          <Link className="home-text-link" href="/services">Explore all services</Link>
         </div>
       </section>
 
-      <section className="section band-loft">
-        <div className="wrap">
-          <Reveal><h2>Alone, you negotiate on your own volume.</h2></Reveal>
-        </div>
-        <Volume />
-        <div className="wrap" style={{ marginTop: "var(--s4)" }}>
-          <div className="split">
-            <p className="lede">
-              The cheapest provider is not the aim. We weigh price against service, reliability, efficiency and what the
-              arrangement is worth over time.
-            </p>
-            <p><Link className="link" href="/strategic-value-assessment">See where your own spend could change</Link></p>
+      <section className="home-section home-advantage">
+        <div className="home-shell home-advantage-grid">
+          <div><p className="home-kicker">The LexBridge advantage</p><h2>Relationships that work<br /><span>harder for your business.</span></h2></div>
+          <div className="home-advantage-list">
+            <div><h3>Carefully chosen partners</h3><p>We bring in people whose service, professionalism and capabilities fit your needs.</p></div>
+            <div><h3>Commercial influence</h3><p>Our established relationships and combined volumes help us negotiate competitive arrangements.</p></div>
+            <div><h3>One relationship, end to end</h3><p>We stay involved, coordinating providers and helping your operation run more smoothly.</p></div>
           </div>
         </div>
       </section>
 
-      <section className="section band-navy">
-        <div className="wrap split split-wide">
-          <Reveal className="stack">
-            <h2>The Strategic Value Assessment</h2>
-            <p className="lede">
-              We sit down with you, go through how your logistics runs today and show you where it can run better. It is
-              complimentary, and it is not a quotation.
-            </p>
-            <p className="lede">
-              You finish with a list of opportunities and a recommended strategy. What you do with it is up to you.
-            </p>
-            <p><Link className="btn btn-primary" href="/strategic-value-assessment">Request an assessment</Link></p>
-          </Reveal>
-          <Reveal>
-            <ul className="ruled small">
-              {assessed.map((a) => <li key={a}>{a}</li>)}
-            </ul>
-          </Reveal>
+      <section className="home-assessment">
+        <div className="home-shell home-assessment-inner">
+          <div><p className="home-kicker">A clearer view of your operation</p><h2>Let’s find the value<br /><span>you may be missing.</span></h2></div>
+          <div><p>Our complimentary Strategic Value Assessment looks beyond rates to your providers, systems, service and opportunities for improvement.</p><Link className="home-button home-button-light" href="/strategic-value-assessment">Request an assessment</Link></div>
         </div>
       </section>
-
-      <section className="section">
-        <div className="wrap">
-          <Reveal className="stack"><h2>What we coordinate</h2></Reveal>
-          <div style={{ marginTop: "var(--s4)" }}><Plates /></div>
-        </div>
-      </section>
-
-      <section className="section band-sail">
-        <div className="wrap">
-          <Reveal className="letter">
-            <h2>We are not trying to pass for a large corporate.</h2>
-            <p>
-              Our strength is a network of established, predominantly family-owned and South African-built logistics
-              businesses, where relationships still matter and senior management is within reach.
-            </p>
-            <p>
-              I have spent years finding the right people inside those businesses. When you work with us you are looked
-              after by a dedicated team at each partner, with one relationship at the centre of it. You do not become
-              another account number.
-            </p>
-            <p>We serve one another for a mutual outcome. When you do well, our partners do well, and so do we.</p>
-            <p className="sign"><strong>{site.contact}</strong><br /><span className="muted">LexBridge Group, {site.locality}</span></p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="wrap split">
-          <Reveal className="stack">
-            <h2>Built for businesses that run on logistics</h2>
-            <p className="lede muted">Usually the first conversation starts with one of these.</p>
-            <ul className="ruled">
-              {signs.map((s) => <li key={s}>{s}</li>)}
-            </ul>
-          </Reveal>
-          <Reveal className="stack">
-            <h3>Who we work with</h3>
-            <ul className="ruled small">
-              {sectors.map((s) => <li key={s}>{s}</li>)}
-            </ul>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section band-loft">
-        <div style={{ maxWidth: "34rem", marginBottom: "var(--s4)" }}><WhippedEnd /></div>
-        <div className="wrap stack">
-          <Reveal className="stack">
-            <h2>Two ways to start. Neither is a quote.</h2>
-            <p className="lede">{convictions[1][1]}</p>
-          </Reveal>
-          <Reveal className="split">
-            <div className="stack">
-              <h3>15-minute strategy session</h3>
-              <p>Introduce the business and talk through what you need from logistics right now. Complimentary.</p>
-              <p><Link className="btn btn-primary" href="/start">Book a session</Link></p>
-            </div>
-            <div className="stack">
-              <h3>Strategic Value Assessment</h3>
-              <p>A fuller review of your existing operation, with the opportunities we find. Complimentary.</p>
-              <p><Link className="btn btn-ghost" href="/strategic-value-assessment">Request an assessment</Link></p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

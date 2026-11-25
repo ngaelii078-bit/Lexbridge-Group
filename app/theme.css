@@ -1,17 +1,18 @@
-/* The navy and gold palette echoes the LexBridge company profile. */
+/* A cinematic charcoal and steel palette with a restrained warm accent. */
 :root {
-  --chalk: #f8f8f6;
+  --chalk: #f5f6f6;
   --sail: #ffffff;
-  --loft: #edf1f4;
-  --navy: #092455;
-  --slate: #43546b;
-  --brand-blue: #12458e;
-  /* The existing token also colours the animated strand. */
-  --orange: #d9ad54;
-  --rule: rgb(7 29 73 / 0.18);
-  --cast: rgb(7 29 73 / 0.12);
+  --loft: #e9edef;
+  --navy: #111a25;
+  --slate: #52606e;
+  --brand-blue: #adc4d0;
+  --orange: #d6b789;
+  --night: #090d13;
+  --night-soft: #151e29;
+  --rule: rgb(17 26 37 / 0.18);
+  --cast: rgb(17 26 37 / 0.12);
 
-  --radius: 2px;
+  --radius: 5px;
   --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
   --micro: 0.3s;
 
