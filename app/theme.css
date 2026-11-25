@@ -1,0 +1,33 @@
+/* Group 0 constants from TASTE.md. Every value on the site resolves to one of these. */
+:root {
+  --chalk: #e3e8e8;
+  --sail: #f2f4f2;
+  --loft: #cdd6d7;
+  --navy: #071d49;
+  --slate: #3b4c6e;
+  --orange: #f26a0a;
+  --rule: rgb(7 29 73 / 0.18);
+  --cast: rgb(7 29 73 / 0.12);
+
+  --radius: 2px;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --micro: 0.3s;
+
+  --t-display: clamp(2.2rem, min(6.9vw, 10.6svh), 6.2rem);
+  --t-h2: clamp(2rem, 4.3vw, 3.875rem);
+  --t-h3: clamp(1.25rem, 1.7vw, 1.5rem);
+  --t-body: clamp(1.0625rem, 1.15vw, 1.1875rem);
+  --t-small: 0.9375rem;
+
+  --s1: 0.5rem;
+  --s2: 1rem;
+  --s3: 1.5rem;
+  --s4: 2.5rem;
+  --s5: 4rem;
+  --s6: 6rem;
+  --section: clamp(4rem, 8vw, 7.5rem);
+  --gutter: clamp(1.25rem, 4.4vw, 4.5rem);
+  --measure: 36rem;
+  --page: 88rem;
+  --header: 4.75rem;
+}
