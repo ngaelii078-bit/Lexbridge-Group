@@ -1,0 +1,70 @@
+/* Home sections: a light, approachable complement to the video hero. */
+.lex-sections { color: #082048; background: #fff; }
+.lex-sections h2, .lex-sections h3 { font-family: var(--font-text), Arial, sans-serif; }
+.lex-section { padding: clamp(5rem, 8vw, 8.5rem) 0; }
+.lex-sections h2 { font-size: clamp(2.35rem, 4.25vw, 4.5rem); line-height: 1.08; letter-spacing: -.045em; font-weight: 600; }
+.lex-sections h2 em { font-style: normal; color: var(--brand-blue); }
+.lex-sections p { line-height: 1.7; }
+.lex-label { display: flex; align-items: center; gap: .65rem; color: #1577a5; font-size: .8rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.lex-label span { width: .55rem; height: .55rem; flex: none; border-radius: 50%; background: var(--orange); }
+.lex-link { display: inline-block; color: #082048; border-bottom: 2px solid var(--orange); font-size: .95rem; font-weight: 700; padding-bottom: .35rem; }
+.lex-link:hover { color: var(--brand-blue); }
+.lex-intro { background: #eaf7fe; overflow: hidden; }
+.lex-intro-grid { display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: clamp(3rem, 8vw, 8rem); }
+.lex-intro-copy { max-width: 38rem; }
+.lex-intro-copy > p:not(.lex-label) { max-width: 32rem; font-size: 1.1rem; color: #46677a; margin: 1.7rem 0 2rem; }
+.lex-network { position: relative; min-height: 28rem; display: grid; place-items: center; isolation: isolate; }
+.lex-network::before { content: ""; position: absolute; z-index: -1; width: 93%; height: 90%; border-radius: 50%; background: radial-gradient(circle, #caecfa, rgba(221,246,255,.35) 68%, transparent 72%); }
+.lex-network-orbit { position: absolute; border: 1px solid rgba(71,160,199,.28); border-radius: 50%; }
+.lex-orbit-one { width: 18rem; height: 18rem; }
+.lex-orbit-two { width: 25rem; height: 25rem; }
+.lex-network-center { width: 11rem; height: 11rem; border: 1px solid rgba(255,255,255,.9); border-radius: 50%; background: linear-gradient(155deg, #fff, #d9f3ff); box-shadow: 0 14px 45px rgba(19,104,147,.16), inset 0 0 0 9px rgba(255,255,255,.5); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: .35rem; }
+.lex-network-center strong { color: #064d76; font-size: 1.25rem; letter-spacing: -.04em; }
+.lex-network-center span { color: #537f94; font-size: .7rem; }
+.lex-network-node { position: absolute; z-index: 1; padding: .75rem 1rem; border: 1px solid rgba(255,255,255,.85); border-radius: 99px; color: #145f85; background: rgba(255,255,255,.88); box-shadow: 0 10px 25px rgba(33,116,154,.1); font-size: .85rem; font-weight: 600; white-space: nowrap; }
+.lex-node-top { top: 6%; left: 43%; }.lex-node-left { left: 0; top: 44%; }.lex-node-right { right: 3%; top: 35%; }.lex-node-bottom { bottom: 8%; right: 32%; }
+.lex-services { background: #fff; }
+.lex-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 3rem; }
+.lex-section-heading > p { max-width: 25rem; color: #526d7b; font-size: 1.02rem; }
+.lex-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 3.5rem; }
+.lex-service-card { min-height: 15.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.7rem; border: 1px solid #dcecf3; border-radius: 16px; background: #f7fbfd; padding: 1.65rem; color: #0a3151; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.lex-service-card:hover { transform: translateY(-4px); border-color: var(--orange); box-shadow: 0 15px 40px rgba(23,90,123,.1); }
+.lex-card-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.lex-card-icon { width: 3rem; height: 3rem; display: grid; place-items: center; flex: none; color: var(--brand-blue); background: var(--loft); border-radius: 12px; }
+.lex-card-icon svg { width: 1.55rem; height: 1.55rem; }
+.lex-card-number { color: #668794; font-size: .72rem; letter-spacing: .04em; }
+.lex-service-card h3 { font-size: 1.18rem; font-weight: 700; letter-spacing: -.02em; }
+.lex-service-card p { margin-top: .5rem; max-width: 24rem; color: #58717f; font-size: .94rem; }
+.lex-card-more { color: var(--brand-blue); font-size: .85rem; font-weight: 700; }
+.lex-services-foot { display: flex; gap: 1rem; justify-content: space-between; align-items: center; padding-top: 2rem; color: #567381; }
+.lex-advantage { background: #dff2fb; }
+.lex-advantage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 8vw, 8rem); align-items: center; }
+.lex-advantage-lede { color: #4d6d7f; max-width: 30rem; margin: 1.5rem 0 1.8rem; font-size: 1.08rem; }
+.lex-partner-image { height: 17rem; margin-top: 2.8rem; border-radius: 20px; background: #c6e7f6 url('/hero/partnership.webp') center / cover no-repeat; box-shadow: 0 18px 42px rgba(15,96,135,.12); }
+.lex-benefits { background: rgba(255,255,255,.76); border: 1px solid rgba(255,255,255,.9); border-radius: 20px; padding: clamp(1.5rem, 4vw, 3.5rem); box-shadow: 0 20px 60px rgba(32,110,147,.08); }
+.lex-benefits > div { display: flex; align-items: start; gap: 1.1rem; padding: 1.5rem 0; }
+.lex-benefits > div:first-child { padding-top: 0; }.lex-benefits > div:last-child { padding-bottom: 0; }.lex-benefits > div + div { border-top: 1px solid #dbeef5; }
+.lex-benefit-symbol { display: grid; place-items: center; flex: none; width: 2.3rem; height: 2.3rem; border-radius: 50%; color: var(--brand-blue); background: var(--loft); font-weight: 700; }
+.lex-benefits h3 { font-size: 1.15rem; font-weight: 700; }
+.lex-benefits p { color: #597481; font-size: .95rem; margin-top: .4rem; }
+.lex-assessment { background: #f8fcfe; }
+.lex-assessment-card { position: relative; isolation: isolate; overflow: hidden; border-radius: 24px; padding: clamp(2.2rem, 6vw, 6rem); background: linear-gradient(120deg, #082048, #103b65 65%, #195780); color: white; display: flex; align-items: end; justify-content: space-between; gap: 3rem; }
+.lex-assessment-pattern { position: absolute; z-index: -1; width: 32rem; height: 32rem; top: -8rem; right: -6rem; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; box-shadow: 0 0 0 4rem rgba(255,255,255,.04), 0 0 0 8rem rgba(255,255,255,.04), 0 0 0 12rem rgba(255,255,255,.035); }
+.lex-assessment .lex-label { color: #c8f0ff; }.lex-assessment h2 em { color: #a5e2f7; }
+.lex-assessment-copy { max-width: 52rem; }.lex-assessment-copy > p:not(.lex-label) { color: #d8eef8; max-width: 38rem; margin-top: 1.6rem; font-size: 1.04rem; }
+.lex-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.lex-button { display: inline-flex; min-height: 3.25rem; padding: .85rem 1.25rem; justify-content: center; align-items: center; border: 1px solid transparent; border-radius: 8px; font-size: .92rem; font-weight: 700; text-align: center; }
+.lex-button-white { color: #0a1720 !important; background: #f5f4ef; }.lex-button-white:hover { background: #ff8a2b; }.lex-button-outline { color: white; border-color: rgba(255,255,255,.65); }.lex-button-outline:hover { background: rgba(255,255,255,.12); }
+.lex-assessment-note { flex: none; color: #d0edf7; font-size: .86rem; }.lex-assessment-note > span { color: #a9e4f8; font-size: 2rem; }.lex-assessment-note strong { color: #fff; }
+@media (max-width: 850px) {
+  .lex-intro-grid, .lex-advantage-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .lex-network { max-width: 35rem; width: 100%; margin-inline: auto; }
+  .lex-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .lex-section-heading { display: block; }.lex-section-heading > p { margin-top: 1.5rem; }
+  .lex-assessment-note { display: none; }
+}
+@media (max-width: 520px) {
+  .lex-network { min-height: 21rem; }.lex-orbit-one { width: 13rem; height: 13rem; }.lex-orbit-two { width: 19rem; height: 19rem; }.lex-network-center { width: 8.5rem; height: 8.5rem; }.lex-network-center strong { font-size: 1.05rem; }.lex-network-node { font-size: .74rem; padding: .6rem .8rem; }.lex-node-left { left: -1%; }.lex-node-right { right: 0; }
+  .lex-service-grid { grid-template-columns: 1fr; }.lex-service-card { min-height: 13.5rem; }.lex-services-foot { align-items: start; flex-direction: column; }
+  .lex-partner-image { height: 14rem; }.lex-actions { flex-direction: column; }.lex-button { width: 100%; }
+}

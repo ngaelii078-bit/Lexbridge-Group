@@ -1,18 +1,18 @@
-/* A cinematic charcoal and steel palette with a restrained warm accent. */
+/* Navy and orange, supported by airy blue backgrounds. */
 :root {
-  --chalk: #f5f6f6;
+  --chalk: #f5fbfe;
   --sail: #ffffff;
-  --loft: #e9edef;
-  --navy: #111a25;
-  --slate: #52606e;
-  --brand-blue: #adc4d0;
-  --orange: #d6b789;
-  --night: #090d13;
-  --night-soft: #151e29;
-  --rule: rgb(17 26 37 / 0.18);
-  --cast: rgb(17 26 37 / 0.12);
+  --loft: #e7f4fa;
+  --navy: #082048;
+  --slate: #465c70;
+  --brand-blue: #123f73;
+  --orange: #f06800;
+  --night: #082048;
+  --night-soft: #17365c;
+  --rule: rgb(8 32 72 / 0.16);
+  --cast: rgb(8 32 72 / 0.10);
 
-  --radius: 5px;
+  --radius: 10px;
   --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
   --micro: 0.3s;
 

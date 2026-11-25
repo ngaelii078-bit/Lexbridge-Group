@@ -98,7 +98,7 @@ export default function KnotHero() {
             providers, so you deal with one person who knows your business.
           </p>
           <div className="actions">
-            <Link href="/start" className="btn btn-primary">Book a 15-minute strategy session</Link>
+            <Link href="/start#inquiry-form" className="btn btn-primary">Book a 15-minute strategy session</Link>
             <Link href="/strategic-value-assessment" className="btn btn-ghost">Request an assessment</Link>
           </div>
         </div>

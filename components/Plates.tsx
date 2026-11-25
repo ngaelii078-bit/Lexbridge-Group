@@ -1,9 +1,11 @@
 import { services } from "@/lib/content";
+import OpenServiceFromHash from "@/components/OpenServiceFromHash";
 
 // Services as an index of plates. Native details, so it works without JavaScript.
 export default function Plates({ openFirst = false }: { openFirst?: boolean }) {
   return (
     <div className="plates">
+      <OpenServiceFromHash />
       {services.map((s, i) => (
         <details key={s.id} id={s.id} open={openFirst && i === 0}>
           <summary>

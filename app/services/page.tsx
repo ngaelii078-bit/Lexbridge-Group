@@ -33,7 +33,7 @@ export default function Services() {
             <p>
               We look at the way work flows today and where clearer processes and better coordination can save your team time.
             </p>
-            <p><Link className="link" href="/start?services=mailroom">Talk to us about your mailroom</Link></p>
+            <p><Link className="link" href="/start?services=mailroom#inquiry-form">Talk to us about your mailroom</Link></p>
           </div>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function Services() {
           <div className="stack">
             <p>That is what the first fifteen minutes are for.</p>
             <p className="actions">
-              <Link className="btn btn-primary" href="/start">Book a session</Link>
+              <Link className="btn btn-primary" href="/start#inquiry-form">Book a session</Link>
               <Link className="btn btn-ghost" href="/strategic-value-assessment">Request an assessment</Link>
             </p>
           </div>

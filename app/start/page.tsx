@@ -19,14 +19,11 @@ export default function Start() {
             Introduce the business and tell us how logistics works today. If we are not the right fit, you will hear
             that from us.
           </p>
-          {site.bookingUrl ? (
-            <p><a className="btn btn-primary" href={site.bookingUrl}>Choose a time</a></p>
-          ) : null}
           <p>
             Prefer to talk now? Call {site.contact} on <a className="link" href={site.phoneHref}>{site.phoneDisplay}</a>.
           </p>
         </div>
-        <EnquiryForm kind="session" available={Boolean(process.env.RESEND_API_KEY && process.env.ENQUIRY_TO && process.env.ENQUIRY_FROM)} />
+        <EnquiryForm kind="session" />
       </div>
     </section>
   );

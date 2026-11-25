@@ -2,12 +2,15 @@ import Link from "next/link";
 import FreightMotion from "@/components/FreightMotion";
 import BackgroundVideo from "@/components/BackgroundVideo";
 import "./home.css";
+import "./home-sections.css";
 
 const capabilities = [
-  ["Local courier", "Nationwide documents, parcels and distribution."],
-  ["International freight", "Imports, exports, air and sea freight, and customs."],
-  ["Transport & warehousing", "Dedicated transport and third-party logistics."],
-  ["E-commerce & mailroom", "Connected shipping, fulfilment and document flows."],
+  ["01", "Nationwide courier", "Reliable document and parcel delivery across South Africa.", "nationwide-courier"],
+  ["02", "International courier", "Connect your business to customers and partners across borders.", "international-courier"],
+  ["03", "Air, sea & customs", "Freight and clearing specialists working together for your business.", "international-freight"],
+  ["04", "Transport & warehousing", "Dedicated transport and 3PL solutions shaped around your operation.", "warehousing"],
+  ["05", "E-commerce logistics", "Connected systems, fulfilment and shipping that help you grow.", "ecommerce"],
+  ["06", "Mailroom management", "Simpler document collection, distribution and courier coordination.", "mailroom"],
 ] as const;
 
 export default function Home() {
@@ -24,7 +27,7 @@ export default function Home() {
             <h1 id="home-heading">One relationship.<br /><em>Every logistics solution.</em></h1>
             <p className="home-intro">The right people. The right partners. One experienced team bringing your logistics together.</p>
             <div className="home-actions">
-              <Link className="home-button home-button-light" href="/start">Book a strategy session</Link>
+              <Link className="home-button home-button-light" href="/start#inquiry-form">Book a strategy session</Link>
               <Link className="home-button home-button-outline" href="/strategic-value-assessment">Explore the assessment</Link>
             </div>
           </div>
@@ -40,55 +43,67 @@ export default function Home() {
       </section>
       </div>
 
-      <section className="home-section home-introduction">
-        <div className="home-shell home-intro-grid">
-          <p className="home-kicker">A better way to work</p>
-          <div>
-            <h2>Logistics is complicated.<br /><span>Your relationship doesn’t have to be.</span></h2>
-            <div className="home-intro-text">
-              <p>Finding the right providers takes time. Managing them takes even more. We bring together a carefully selected network and coordinate the relationships for you.</p>
-              <p>With experience, commercial influence and a personal approach, we help you make better decisions across the whole operation.</p>
+      <div className="lex-sections">
+        <section className="lex-intro lex-section">
+          <div className="home-shell lex-intro-grid">
+            <div className="lex-intro-copy">
+              <p className="lex-label"><span /> A better way to do logistics</p>
+              <h2>Great logistics starts with <em>great relationships.</em></h2>
+              <p>Finding and managing the right providers takes time. We bring them together, so you can get back to what you do best: growing your business.</p>
+              <Link className="lex-link" href="/about">Get to know LexBridge</Link>
             </div>
-            <Link className="home-text-link" href="/about">Get to know LexBridge</Link>
+            <div className="lex-network" aria-label="One relationship connecting your business with logistics specialists">
+              <div className="lex-network-orbit lex-orbit-one" aria-hidden="true" />
+              <div className="lex-network-orbit lex-orbit-two" aria-hidden="true" />
+              <span className="lex-network-node lex-node-top">Courier</span>
+              <span className="lex-network-node lex-node-left">Warehousing</span>
+              <span className="lex-network-node lex-node-right">Freight</span>
+              <span className="lex-network-node lex-node-bottom">Mailroom</span>
+              <div className="lex-network-center"><span>One connection.</span><strong>LexBridge</strong><span>More possibilities.</span></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="home-section home-services" id="solutions">
-        <div className="home-shell">
-          <div className="home-section-head">
-            <div><p className="home-kicker">What we coordinate</p><h2>All the moving parts.<br /><span>One point of contact.</span></h2></div>
-            <p>From a single shipment to an entire logistics operation, we connect your business with the specialists it needs.</p>
+        <section className="lex-services lex-section" id="solutions">
+          <div className="home-shell">
+            <div className="lex-section-heading">
+              <div><p className="lex-label"><span /> Everything working together</p><h2>Big picture thinking.<br /><em>Everyday solutions.</em></h2></div>
+              <p>From your mailroom to the other side of the world, we bring the right specialists together for you.</p>
+            </div>
+            <div className="lex-service-grid">
+              {capabilities.map(([number, title, description, id]) => (
+                <Link className="lex-service-card" href={`/services#${id}`} key={id}>
+                  <div className="lex-card-top"><span className="lex-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">{number === "01" ? <><path d="M4 7 12 3l8 4v10l-8 4-8-4V7Z"/><path d="m4 7 8 4 8-4M12 11v10"/></> : number === "02" ? <><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></> : number === "03" ? <><path d="m3 14 7-2 3-8 2-1-1 8 6-1 1 1-7 4-2 5-2 1v-5l-5 1-2-2Z"/></> : number === "04" ? <><path d="M3 10 12 4l9 6v10H3V10ZM8 20v-6h8v6"/></> : number === "05" ? <><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></> : <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></>}</svg></span><span className="lex-card-number">LexBridge solutions</span></div>
+                  <div><h3>{title}</h3><p>{description}</p></div>
+                  <span className="lex-card-more">Explore service</span>
+                </Link>
+              ))}
+            </div>
+            <div className="lex-services-foot"><p>Not sure where to start? We’ll figure it out together.</p><Link className="lex-link" href="/services">View all services</Link></div>
           </div>
-          <div className="home-service-grid">
-            {capabilities.map(([title, description]) => (
-              <article className="home-service-card" key={title}>
-                <span className="home-card-number">Logistics solutions</span>
-                <div><h3>{title}</h3><p>{description}</p></div>
-              </article>
-            ))}
-          </div>
-          <Link className="home-text-link" href="/services">Explore all services</Link>
-        </div>
-      </section>
+        </section>
 
-      <section className="home-section home-advantage">
-        <div className="home-shell home-advantage-grid">
-          <div><p className="home-kicker">The LexBridge advantage</p><h2>Relationships that work<br /><span>harder for your business.</span></h2></div>
-          <div className="home-advantage-list">
-            <div><h3>Carefully chosen partners</h3><p>We bring in people whose service, professionalism and capabilities fit your needs.</p></div>
-            <div><h3>Commercial influence</h3><p>Our established relationships and combined volumes help us negotiate competitive arrangements.</p></div>
-            <div><h3>One relationship, end to end</h3><p>We stay involved, coordinating providers and helping your operation run more smoothly.</p></div>
+        <section className="lex-advantage lex-section">
+          <div className="home-shell lex-advantage-grid">
+            <div><p className="lex-label"><span /> Why LexBridge</p><h2>A partner who’s<br /><em>in your corner.</em></h2><p className="lex-advantage-lede">Good logistics is about more than moving things. It’s about having the right people by your side.</p><Link className="lex-link" href="/about">Meet the people behind LexBridge</Link><div className="lex-partner-image" role="img" aria-label="Illustration of two professionals reviewing logistics plans" /></div>
+            <div className="lex-benefits">
+              <div><span className="lex-benefit-symbol" aria-hidden="true">✓</span><div><h3>Partners chosen with care</h3><p>We connect you with proven specialists who share our commitment to service.</p></div></div>
+              <div><span className="lex-benefit-symbol" aria-hidden="true">✓</span><div><h3>Commercial advantage</h3><p>Established relationships and combined volumes help us negotiate competitive arrangements.</p></div></div>
+              <div><span className="lex-benefit-symbol" aria-hidden="true">✓</span><div><h3>One person to call</h3><p>We coordinate the moving parts, so you have one experienced point of contact.</p></div></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="home-assessment">
-        <div className="home-shell home-assessment-inner">
-          <div><p className="home-kicker">A clearer view of your operation</p><h2>Let’s find the value<br /><span>you may be missing.</span></h2></div>
-          <div><p>Our complimentary Strategic Value Assessment looks beyond rates to your providers, systems, service and opportunities for improvement.</p><Link className="home-button home-button-light" href="/strategic-value-assessment">Request an assessment</Link></div>
-        </div>
-      </section>
+        <section className="lex-assessment lex-section">
+          <div className="home-shell">
+            <div className="lex-assessment-card">
+              <div className="lex-assessment-pattern" aria-hidden="true" />
+              <div className="lex-assessment-copy"><p className="lex-label"><span /> Complimentary Strategic Value Assessment</p><h2>See the bigger picture.<br /><em>Find a better way forward.</em></h2><p>Let’s look at your providers, processes, spend and service together. We’ll identify opportunities to make your logistics work better for your business.</p><div className="lex-actions"><Link className="lex-button lex-button-white" href="/strategic-value-assessment">Request your assessment</Link><Link className="lex-button lex-button-outline" href="/start#inquiry-form">Book a 15-minute chat</Link></div></div>
+              <div className="lex-assessment-note"><span aria-hidden="true">✳</span><p>We start by listening.<br /><strong>No pressure. Just a conversation.</strong></p></div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

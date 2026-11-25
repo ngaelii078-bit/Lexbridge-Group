@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { nav } from "@/lib/site";
@@ -20,18 +21,17 @@ export default function Header() {
     <header className="site-head">
       <div className="wrap">
         <Link href="/" className="brand-lockup" aria-label="LexBridge Group, home">
-          <span className="brand-name"><span>LEX</span>BRIDGE GROUP</span>
-          <span className="brand-tagline">Built on trust, powered by purpose</span>
+          <Image className="brand-logo" src="/lexbridge-logo.png" alt="" width={190} height={75} priority />
         </Link>
         <nav className="site-nav" aria-label="Main">
           {links}
-          <Link href="/start" className="btn btn-primary">Book 15 minutes</Link>
+          <Link href="/start#inquiry-form" className="btn btn-primary">Book 15 minutes</Link>
         </nav>
         <details className="menu" ref={menu}>
-          <summary>Menu</summary>
+          <summary><span>Menu</span><span className="menu-icon" aria-hidden="true"><i /><i /></span></summary>
           <nav aria-label="Mobile">
             {links}
-            <Link href="/start" className="btn btn-primary">Book 15 minutes</Link>
+            <Link href="/start#inquiry-form" className="btn btn-primary">Book 15 minutes</Link>
           </nav>
         </details>
       </div>

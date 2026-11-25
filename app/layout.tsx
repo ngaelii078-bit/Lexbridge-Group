@@ -3,6 +3,7 @@ import { Besley, Libre_Franklin } from "next/font/google";
 import type { ReactNode } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import AssistantDemo from "@/components/AssistantDemo";
 import SmoothScroll from "@/components/SmoothScroll";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Header />
           <main id="main">{children}</main>
           <Footer />
+          <AssistantDemo />
         </SmoothScroll>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       </body>

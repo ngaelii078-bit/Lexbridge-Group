@@ -57,7 +57,7 @@ export default function About() {
               right specialists and stays responsible for the relationship.
             </p>
             <p>Behind that, a dedicated team inside each partner firm, where you are known by name.</p>
-            <p><Link className="btn btn-primary" href="/start">Book a session</Link></p>
+            <p><Link className="btn btn-primary" href="/start#inquiry-form">Book a session</Link></p>
           </Reveal>
         </div>
       </section>

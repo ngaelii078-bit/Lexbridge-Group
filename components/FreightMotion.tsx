@@ -26,10 +26,7 @@ export default function FreightMotion() {
       },
       (context) => {
         const wide = Boolean(context.conditions?.wide);
-        const story = hero.parentElement ?? hero;
-        const scroll = wide && window.matchMedia("(min-height: 42rem)").matches
-          ? { trigger: story, start: "top top", end: "bottom bottom", scrub: 1 }
-          : { trigger: hero, start: "top top", end: "bottom top", scrub: 1 };
+        const scroll = { trigger: hero, start: "top top", end: "bottom top", scrub: 1 };
 
         // Keep all content visible before hydration; the entrance only changes position.
         if (copy) gsap.from(copy, { y: 12, duration: 0.9, ease: "power2.out", clearProps: "transform" });

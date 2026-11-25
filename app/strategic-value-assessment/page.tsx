@@ -69,7 +69,7 @@ export default function Assessment() {
             <h2>Request an assessment</h2>
             <p className="lede muted">Let’s discuss your operation and arrange a time to look at it together.</p>
           </div>
-          <EnquiryForm kind="assessment" available={Boolean(process.env.RESEND_API_KEY && process.env.ENQUIRY_TO && process.env.ENQUIRY_FROM)} />
+          <EnquiryForm kind="assessment" />
         </div>
       </section>
     </>
