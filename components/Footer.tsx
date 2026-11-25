@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { nav, site } from "@/lib/site";
-import Todo from "./Todo";
 
 export default function Footer() {
   return (
@@ -24,7 +23,7 @@ export default function Footer() {
             <ul className="stack small">
               <li><Link className="link" href="/privacy">Privacy notice</Link></li>
               <li><Link className="link" href="/legal">Legal information</Link></li>
-              <li>{site.legalName ?? <Todo>Registered name and number</Todo>}</li>
+              {site.legalName && <li>{site.legalName}</li>}
               <li>{site.locality}, {site.region}, South Africa</li>
             </ul>
           </div>

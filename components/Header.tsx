@@ -19,7 +19,10 @@ export default function Header() {
   return (
     <header className="site-head">
       <div className="wrap">
-        <Link href="/" className="mark">LexBridge Group</Link>
+        <Link href="/" className="brand-lockup" aria-label="LexBridge Group, home">
+          <span className="brand-name"><span>LEX</span>BRIDGE GROUP</span>
+          <span className="brand-tagline">Built on trust, powered by purpose</span>
+        </Link>
         <nav className="site-nav" aria-label="Main">
           {links}
           <Link href="/start" className="btn btn-primary">Book 15 minutes</Link>

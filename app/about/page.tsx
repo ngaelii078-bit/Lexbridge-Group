@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import Todo from "@/components/Todo";
 import { convictions } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -33,6 +32,22 @@ export default function About() {
           </Reveal>
         </div>
       </section>
+      <section className="section band-sail">
+        <div className="wrap split">
+          <Reveal><h2>Strong partnerships, better outcomes</h2></Reveal>
+          <Reveal className="stack">
+            <p>
+              Our network includes Bridgewater Logistics, QI Logistics (Quad International Logistics), and BEX Express.
+              Together, these relationships give businesses access to specialist logistics experience through one
+              coordinated point of contact.
+            </p>
+            <p>
+              We choose solutions around your business, bringing together the right people for your requirements and
+              staying involved as those requirements change.
+            </p>
+          </Reveal>
+        </div>
+      </section>
       <section className="section">
         <div className="wrap split">
           <Reveal><h2>Who you deal with</h2></Reveal>
@@ -42,7 +57,6 @@ export default function About() {
               right specialists and stays responsible for the relationship.
             </p>
             <p>Behind that, a dedicated team inside each partner firm, where you are known by name.</p>
-            <p><Todo>Photograph of Lex, and partner names once each has agreed in writing</Todo></p>
             <p><Link className="btn btn-primary" href="/start">Book a session</Link></p>
           </Reveal>
         </div>

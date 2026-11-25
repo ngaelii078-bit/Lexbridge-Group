@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: "A complimentary review of your whole logistics operation: providers, spend, volumes, systems and service. Not a quotation.",
 };
 
+export const dynamic = "force-dynamic";
+
 const stages = [
   ["We sit down with you", "We learn how the business works and what it needs logistics to do."],
   ["We look at the whole operation", "Domestic and international, the providers, the systems and the people running it."],
@@ -65,9 +67,9 @@ export default function Assessment() {
         <div className="wrap split">
           <div className="stack">
             <h2>Request an assessment</h2>
-            <p className="lede muted">Tell us a little about the operation. We will come back to arrange a time.</p>
+            <p className="lede muted">Let’s discuss your operation and arrange a time to look at it together.</p>
           </div>
-          <EnquiryForm kind="assessment" />
+          <EnquiryForm kind="assessment" available={Boolean(process.env.RESEND_API_KEY && process.env.ENQUIRY_TO && process.env.ENQUIRY_FROM)} />
         </div>
       </section>
     </>

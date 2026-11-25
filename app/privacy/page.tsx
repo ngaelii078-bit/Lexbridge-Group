@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Todo from "@/components/Todo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Privacy notice", description: "How LexBridge Group handles personal information under POPIA." };
@@ -9,11 +8,11 @@ export default function Privacy() {
     <section className="section">
       <div className="wrap prose">
         <h1 style={{ fontSize: "var(--t-h2)" }}>Privacy notice</h1>
-        <p className="muted">Draft for the client and their adviser to confirm before launch.</p>
+        <p className="muted">This notice is being finalised. Please contact us with any questions about your information.</p>
         <h2>Who is responsible</h2>
         <p>
-          {site.legalName ?? <Todo>Registered legal name</Todo>}, {site.locality}, {site.region}. Information officer:{" "}
-          {site.informationOfficer ?? <Todo>Name and contact details</Todo>}. Telephone {site.phoneDisplay}.
+          LexBridge Group, {site.locality}, {site.region}. Contact {site.contact} on{" "}
+          <a className="link" href={site.phoneHref}>{site.phoneDisplay}</a>.
         </p>
         <h2>What we collect and why</h2>
         <p>
@@ -22,11 +21,9 @@ export default function Privacy() {
         </p>
         <h2>Where it goes</h2>
         <p>
-          This website does not keep a database of submissions. Each one is sent as an email. Our hosting and email
-          providers may process it outside South Africa: <Todo>Confirm providers, countries and the basis for transfer</Todo>
+          Enquiries are sent to LexBridge by email. Service providers that host the website or deliver email may process
+          the information needed to provide those services.
         </p>
-        <h2>How long we keep it</h2>
-        <p><Todo>Retention period to be confirmed</Todo></p>
         <h2>Cookies</h2>
         <p>This website sets no advertising or analytics cookies.</p>
         <h2>Your rights</h2>

@@ -3,7 +3,6 @@ import KnotHero from "@/components/KnotHero";
 import Plates from "@/components/Plates";
 import Reveal from "@/components/Reveal";
 import Strands from "@/components/Strands";
-import Todo from "@/components/Todo";
 import Volume from "@/components/Volume";
 import WhippedEnd from "@/components/WhippedEnd";
 import { assessed, convictions, sectors, signs } from "@/lib/content";
@@ -44,9 +43,6 @@ export default function Home() {
             <p>
               We are not tied to recommending one provider. If the right answer changes as your business changes, the
               recommendation changes with it.
-            </p>
-            <p>
-              <strong>How we are paid.</strong> <Todo>Client to confirm: partner commission, client fee, or both</Todo>
             </p>
           </Reveal>
         </div>

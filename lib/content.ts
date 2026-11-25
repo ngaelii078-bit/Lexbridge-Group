@@ -6,15 +6,15 @@ export const steps = [
     body: "Several providers, several accounts, and someone on your team chasing all of them.",
   },
   {
-    title: "We come through it first.",
+    title: "We listen first.",
     body: "Fifteen minutes to understand the business before anything is recommended.",
   },
   {
-    title: "Then round the whole of it.",
+    title: "We look at the whole operation.",
     body: "Spend, volumes, systems and service levels. Not only courier rates.",
   },
   {
-    title: "Draw it tight. It holds.",
+    title: "One relationship. The right partners.",
     body: "One relationship, with the right providers managed behind it.",
   },
 ];
@@ -91,6 +91,16 @@ export const services: Service[] = [
     ],
   },
   {
+    id: "warehousing",
+    name: "3PL warehousing and distribution",
+    short: "Warehousing and distribution",
+    summary: "Warehousing and distribution coordinated through an established 3PL specialist.",
+    items: [
+      "Third-party logistics warehousing",
+      "Distribution solutions tailored to your business",
+    ],
+  },
+  {
     id: "ecommerce",
     name: "E-commerce logistics and automated systems",
     short: "E-commerce shipping",
@@ -108,7 +118,7 @@ export const services: Service[] = [
     id: "mailroom",
     name: "Mailroom management",
     short: "Mailroom",
-    summary: "Documents collected, sorted and delivered without your people running the post.",
+    summary: "A more connected mailroom, from document collection and distribution to courier integration and process improvements.",
     items: [
       "Centralised mailroom operations",
       "Document collection and distribution",

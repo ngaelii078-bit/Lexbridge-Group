@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "A complimentary 15-minute conversation about your business and what it needs from logistics.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function Start() {
   return (
     <section className="section">
@@ -24,7 +26,7 @@ export default function Start() {
             Prefer to talk now? Call {site.contact} on <a className="link" href={site.phoneHref}>{site.phoneDisplay}</a>.
           </p>
         </div>
-        <EnquiryForm kind="session" />
+        <EnquiryForm kind="session" available={Boolean(process.env.RESEND_API_KEY && process.env.ENQUIRY_TO && process.env.ENQUIRY_FROM)} />
       </div>
     </section>
   );

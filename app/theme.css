@@ -1,11 +1,13 @@
-/* Group 0 constants from TASTE.md. Every value on the site resolves to one of these. */
+/* The navy and gold palette echoes the LexBridge company profile. */
 :root {
-  --chalk: #e3e8e8;
-  --sail: #f2f4f2;
-  --loft: #cdd6d7;
-  --navy: #071d49;
-  --slate: #3b4c6e;
-  --orange: #f26a0a;
+  --chalk: #f8f8f6;
+  --sail: #ffffff;
+  --loft: #edf1f4;
+  --navy: #092455;
+  --slate: #43546b;
+  --brand-blue: #12458e;
+  /* The existing token also colours the animated strand. */
+  --orange: #d9ad54;
   --rule: rgb(7 29 73 / 0.18);
   --cast: rgb(7 29 73 / 0.12);
 

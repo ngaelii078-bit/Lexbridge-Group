@@ -6,9 +6,9 @@ import { services } from "@/lib/content";
 import { enquirySchema } from "@/lib/enquiry";
 import { site } from "@/lib/site";
 
-type Props = { kind: "session" | "assessment" };
+type Props = { kind: "session" | "assessment"; available: boolean };
 
-export default function EnquiryForm({ kind }: Props) {
+export default function EnquiryForm({ kind, available }: Props) {
   const router = useRouter();
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
@@ -65,6 +65,16 @@ export default function EnquiryForm({ kind }: Props) {
       {errors[name] && <p className="err" id={`${kind}-${name}-err`}>{errors[name]}</p>}
     </div>
   );
+
+  if (!available) {
+    return (
+      <div className="stack">
+        <h2>Let’s talk about your business</h2>
+        <p>To arrange your complimentary {kind === "assessment" ? "Strategic Value Assessment" : "15-minute strategy session"}, call {site.contact}.</p>
+        <p><a className="btn btn-primary" href={site.phoneHref}>Call {site.phoneDisplay}</a></p>
+      </div>
+    );
+  }
 
   return (
     <form className="form" onSubmit={submit} noValidate>

@@ -107,7 +107,7 @@ export default function KnotHero() {
         className="hero-art"
         ref={art}
         role="img"
-        aria-label="An orange rope threads a heavier navy rope and draws up into a sheet bend, the knot used to join two ropes of unequal size."
+        aria-label="A gold rope threads a heavier navy rope and draws up into a sheet bend, the knot used to join two ropes of unequal size."
       >
         <noscript>
           {/* eslint-disable-next-line @next/next/no-img-element */}
