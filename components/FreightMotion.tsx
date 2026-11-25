@@ -15,7 +15,6 @@ export default function FreightMotion() {
     const hero = anchor.current?.closest<HTMLElement>(".motion-hero");
     if (!hero) return;
 
-    const scene = hero.querySelector<HTMLElement>("[data-freight-scene]");
     const glass = hero.querySelector<HTMLElement>("[data-freight-glass]");
     const copy = hero.querySelector<HTMLElement>("[data-freight-copy]");
     const media = gsap.matchMedia();
@@ -38,7 +37,6 @@ export default function FreightMotion() {
           gsap.from(glass, { y: 12, duration: 1, ease: "power2.out" });
           gsap.to(glass, { yPercent: wide ? -18 : -8, ease: "none", scrollTrigger: scroll });
         }
-        if (scene) gsap.to(scene, { yPercent: wide ? 4 : 2, scale: 1.12, ease: "none", scrollTrigger: scroll });
       },
     );
 

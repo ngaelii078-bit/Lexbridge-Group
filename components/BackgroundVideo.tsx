@@ -25,7 +25,7 @@ export default function BackgroundVideo() {
 
   return (
     <video ref={video} className="home-background-video" muted loop playsInline preload="metadata" aria-hidden="true" tabIndex={-1}>
-      <source src="/hero/background-video-hd.mp4" type="video/mp4" />
+      <source src="/hero/background-video.mp4" type="video/mp4" />
     </video>
   );
 }
