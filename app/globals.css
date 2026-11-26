@@ -195,7 +195,12 @@
   .assistant-note { color: var(--slate); }
   @media (max-width: 30rem) {
     .assistant-panel { right: .5rem; bottom: 4.75rem; width: calc(100vw - 1rem); height: min(78svh, 38rem); padding: 1rem; }
-    .assistant-launch { right: .5rem; bottom: .5rem; }
+    .assistant-launch { right: .75rem; bottom: .75rem; width: 3rem; min-height: 3rem; padding: 0; border-radius: 50%; font-size: 0; }
+    .assistant-launch::before { content: "?"; font-size: 1.35rem; }
+  }
+  @media (max-width: 40rem) {
+    .section:has(.form) { padding-bottom: calc(var(--section) + 3.5rem); }
+    .site-foot-inner { padding-bottom: 6rem; }
   }
   .prose h2 { font-size: var(--t-h3); margin-top: var(--s4); margin-bottom: var(--s1); }
   .prose p, .prose li { max-width: 44rem; }

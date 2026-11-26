@@ -141,6 +141,7 @@ export default function AssistantDemo() {
       <button
         className="assistant-launch"
         type="button"
+        aria-label={open ? "Close assistant" : "Ask LexBridge"}
         aria-expanded={open}
         aria-controls="assistant-panel"
         onClick={() => setOpen((value) => !value)}

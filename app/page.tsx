@@ -53,6 +53,44 @@ export default function Home() {
               <Link className="lex-link" href="/about">Get to know LexBridge</Link>
             </div>
             <div className="lex-network" aria-label="One relationship connecting your business with logistics specialists">
+              <svg className="lex-network-flow" viewBox="0 0 600 450" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <g className="lex-flow-routes">
+                  <path d="M300 225 C300 164 290 105 300 47" />
+                  <path d="M300 225 C225 225 155 207 76 220" />
+                  <path d="M300 225 C375 225 452 190 529 188" />
+                  <path d="M300 225 C305 297 339 350 380 402" />
+                </g>
+                <g className="lex-flow-packets">
+                  <g>
+                    <circle className="lex-flow-badge" r="18" />
+                    <g className="lex-flow-symbol" transform="translate(-10 -10) scale(.83)">
+                      <path d="M4 7 12 3l8 4v10l-8 4-8-4V7Z" /><path d="m4 7 8 4 8-4M12 11v10" />
+                    </g>
+                    <animateMotion dur="3.8s" repeatCount="indefinite" path="M300 225 C300 164 290 105 300 47" />
+                  </g>
+                  <g>
+                    <circle className="lex-flow-badge" r="18" />
+                    <g className="lex-flow-symbol" transform="translate(-10 -10) scale(.83)">
+                      <path d="M3 10 12 4l9 6v10H3V10ZM8 20v-6h8v6" />
+                    </g>
+                    <animateMotion dur="4.8s" begin="-.9s" repeatCount="indefinite" path="M300 225 C225 225 155 207 76 220" />
+                  </g>
+                  <g>
+                    <circle className="lex-flow-badge" r="18" />
+                    <g className="lex-flow-symbol" transform="translate(-10 -10) scale(.83)">
+                      <path d="M3 15h18l-2.5 4h-13L3 15ZM7 15V8h10v7M10 8V5h4v3M3 21c1 .6 2 .6 3 0s2-.6 3 0 2 .6 3 0 2-.6 3 0 2 .6 3 0 2-.6 3 0" />
+                    </g>
+                    <animateMotion dur="4.2s" begin="-1.7s" repeatCount="indefinite" path="M300 225 C375 225 452 190 529 188" />
+                  </g>
+                  <g>
+                    <circle className="lex-flow-badge" r="18" />
+                    <g className="lex-flow-symbol" transform="translate(-10 -10) scale(.83)">
+                      <rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" />
+                    </g>
+                    <animateMotion dur="4.5s" begin="-2.3s" repeatCount="indefinite" path="M300 225 C305 297 339 350 380 402" />
+                  </g>
+                </g>
+              </svg>
               <div className="lex-network-orbit lex-orbit-one" aria-hidden="true" />
               <div className="lex-network-orbit lex-orbit-two" aria-hidden="true" />
               <span className="lex-network-node lex-node-top">Courier</span>
