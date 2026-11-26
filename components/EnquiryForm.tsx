@@ -6,7 +6,7 @@ import { services } from "@/lib/content";
 import { enquirySchema } from "@/lib/enquiry";
 import { site } from "@/lib/site";
 
-type Props = { kind: "session" | "assessment" };
+type Props = { kind: "session" | "assessment" | "quote" };
 export default function EnquiryForm({ kind }: Props) {
   const router = useRouter();
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -76,7 +76,7 @@ export default function EnquiryForm({ kind }: Props) {
         {field("phone", "Phone", "tel", "tel")}
       </div>
       <fieldset className="field strand-pick">
-        <legend>What do you manage today? (optional)</legend>
+        <legend>{kind === "quote" ? "What do you need help with? (optional)" : "What do you manage today? (optional)"}</legend>
         {services.map((s) => (
           <label key={s.id} style={{ fontWeight: 400 }}>
             <input
@@ -88,7 +88,7 @@ export default function EnquiryForm({ kind }: Props) {
         ))}
       </fieldset>
       <div className="field">
-        <label htmlFor={`${kind}-message`}>What is not working? (optional)</label>
+        <label htmlFor={`${kind}-message`}>{kind === "quote" ? "Tell us what you need a quote for (optional)" : "What is not working? (optional)"}</label>
         <textarea id={`${kind}-message`} name="message" rows={4} maxLength={2000} />
       </div>
       <div className="trap" aria-hidden="true">
@@ -107,7 +107,7 @@ export default function EnquiryForm({ kind }: Props) {
       </p>
       <p>
         <button className="btn btn-primary" type="submit" disabled={busy}>
-          {busy ? "Sending" : kind === "assessment" ? "Request the assessment" : "Request a session"}
+          {busy ? "Sending" : kind === "assessment" ? "Request the assessment" : kind === "quote" ? "Request a quote" : "Request a session"}
         </button>
       </p>
     </form>

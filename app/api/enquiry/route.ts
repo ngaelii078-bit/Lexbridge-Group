@@ -46,13 +46,13 @@ export async function POST(req: Request) {
   const d = parsed.data;
   const picked = services.filter((s) => d.services.includes(s.id)).map((s) => s.name);
   const text = [
-    d.kind === "assessment" ? "Strategic Value Assessment request" : "15-minute strategy session request",
+    d.kind === "assessment" ? "Strategic Value Assessment request" : d.kind === "quote" ? "Quote request" : "15-minute strategy session request",
     "",
     `Name: ${d.name}`,
     `Company: ${d.company}`,
     `Email: ${d.email}`,
     `Phone: ${d.phone}`,
-    `Managing today: ${picked.length ? picked.join(", ") : "not given"}`,
+    `${d.kind === "quote" ? "Help needed" : "Managing today"}: ${picked.length ? picked.join(", ") : "not given"}`,
     "",
     d.message || "No message.",
   ].join("\n");
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
         from: ENQUIRY_FROM,
         to: [ENQUIRY_TO],
         reply_to: d.email,
-        subject: d.kind === "assessment" ? "New assessment request" : "New strategy session request",
+        subject: d.kind === "assessment" ? "New assessment request" : d.kind === "quote" ? "New quote request" : "New strategy session request",
         text,
       }),
       signal: AbortSignal.timeout(10000),

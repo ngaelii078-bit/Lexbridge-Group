@@ -25,13 +25,13 @@ export default function Header() {
         </Link>
         <nav className="site-nav" aria-label="Main">
           {links}
-          <Link href="/start#inquiry-form" className="btn btn-primary">Book 15 minutes</Link>
+          <Link href="/quote#inquiry-form" className="btn btn-primary">Get a quote now</Link>
         </nav>
         <details className="menu" ref={menu}>
           <summary><span>Menu</span><span className="menu-icon" aria-hidden="true"><i /><i /></span></summary>
           <nav aria-label="Mobile">
             {links}
-            <Link href="/start#inquiry-form" className="btn btn-primary">Book 15 minutes</Link>
+            <Link href="/quote#inquiry-form" className="btn btn-primary">Get a quote now</Link>
           </nav>
         </details>
       </div>

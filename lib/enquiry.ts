@@ -4,7 +4,7 @@ import { services } from "./content";
 const ids = services.map((s) => s.id) as [string, ...string[]];
 
 export const enquirySchema = z.strictObject({
-  kind: z.enum(["session", "assessment"]),
+  kind: z.enum(["session", "assessment", "quote"]),
   name: z.string().trim().min(2, "Please give your name.").max(80),
   company: z.string().trim().min(2, "Please give your company.").max(120),
   email: z.email("Please give a valid email address.").max(160),
